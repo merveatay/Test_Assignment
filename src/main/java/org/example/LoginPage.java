@@ -70,7 +70,7 @@ public class LoginPage {
         webDriverWait.until(ExpectedConditions.elementToBeClickable(By.cssSelector("a[class='cartItem__button -remove']"))).click();   ///Erase basket item
         WebElement emptyBasket = webDriver.findElement(By.cssSelector("h2[class='cartEmpty__title']"));
         String controlEmpty = emptyBasket.getText().toString();
-        Assert.assertTrue("Sepetinizde ürün bulunmamaktadır",controlEmpty.equals("Sepetinizde ürün bulunmamaktadır")); /// I try "Sepetinizzzz boş" for assertTrue. And it will work correctly
+        Assert.assertTrue("Sepetinizde ürün bulunmamaktadır",controlEmpty.equals("Sepetinizde ürün bulunmamaktadır")); 
 
         webDriver.quit();
     }
